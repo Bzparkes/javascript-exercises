@@ -1,16 +1,27 @@
-const sumAll = function(...args) {
-    const array = [];
-    let sum = args;
-
-    for(let i = 0; i < array.length; i++){
-        sum += array[i];
-        
+const sumAll = function (x, y) {
+    if (x > 0 && y > 0 && typeof x === 'number' && typeof y === 'number') {
+        var valorx = x;
+        var valory = y;
+        var total = 0;
+        if (x < y) {
+            for (var i = valorx; i <= valory; i++) {
+                total += i;
+            }
+            return total;
+        } else if (x > y) {
+            for (var i = valory; i <= valorx; i++) {
+                total += i;
+            }
+            return total;
+        }
+    } else {
+        return 'ERROR'
+     }
     }
-    console.log(sum)
-    return sum;
-};
-
-sumAll();
+    
+    
+    module.exports = sumAll
+    
 
 // Do not edit below this line
 module.exports = sumAll;
