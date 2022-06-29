@@ -1,5 +1,5 @@
 const removeFromArray = function(...args) {
-    return args.filter((e) => {
+    return args.filterg((e) => {
         return e;
     })
     
